@@ -1,0 +1,143 @@
+html,body{
+	width:100%;
+	height:100%;
+	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, "Pingfang SC", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
+	background-color: #fff;
+	color: #3c3c3c;
+	font-size: 16px;
+	line-height: 1.4;
+	box-sizing: border-box;
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	overflow: auto;
+	.mint-msgbox-input input{
+		box-sizing: border-box;
+		height:.7rem;
+	}
+	.mint-popup-bottom{
+		width:100%;
+	}
+	.mint-msgbox{
+		.cancel_btn{
+			color:#3c3c3c;
+		}
+	}
+}
+*:focus { outline: none; } 
+i,em,strong{
+	font-style:normal;
+	font-weight: normal;
+}
+*{
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration:none;
+	color:#555;
+}
+li{
+	list-style:none;
+}
+input,button{
+	border:none;
+	outline: none;
+	display: inline-block;
+}
+input[type='text'],
+input[type='password'],
+{
+	-webkit-appearance: none;
+}
+.slide-right-leave-active,
+.slide-left-enter-active,
+.slide-left-leave-active,
+.slide-right-enter-active{
+	transition: transform .3s cubic-bezier(0.1, 0.57, 0.1, 1);
+	-webkit-backface-visibility: hidden;
+}
+
+.slide-left-enter,
+.slide-left-leave-to{
+	-webkit-backface-visibility:hidden;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform:translate3d(-100%,0,0);
+	transform: translate3d(-100%,0,0)
+}
+.slide-right-enter,
+.slide-right-leave-to{
+	-webkit-backface-visibility:hidden;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform:translate3d(100%,0,0);
+	transform: translate3d(100%,0,0)
+}
+.opacity{
+	@keyframes opcity-animation{
+		0%{
+			opacity:1;
+		}
+		50%{
+			opacity:1;
+		}
+		100%{
+			opacity:0;
+		}
+	}
+}
+.body{
+	overflow: auto;
+	height:100%;
+	width:100%;  
+	position:absolute;
+}
+.maincontent{
+	min-height: 100.2%;
+}
+.content{
+	height:calc(100% - 70px);
+	overflow: auto;
+	background-color:#282c38;
+}
+.large{
+	text-align: center;
+	@include fl(.35rem,1.4,#000);
+	margin-top:1.2rem;
+}
+.other{
+	@extend .large;
+	color:$tipscolor;
+	font-size:12px;
+	margin-top:20px;
+}
+.btn_wp{
+	@include flex(row,space-between);
+	height:.8rem;
+	.btn1{
+		border-radius:2px;
+		height:100%;
+		width:48%;
+		background-color:#282c37;
+		@include fl(14px,.8rem,#fff);
+		@include flex(row,center);
+		align-items: center;
+		img{
+			height:.4rem;
+			width:auto;
+			margin-right:3px;
+		}
+	}
+	.btn2{
+		@extend .btn1;
+		background-color:#fff;
+		color:#000;
+	}
+}
+.common_content{
+	height:calc(100% - 70px);
+}
+.up{
+	line-height:30px;
+	text-align: center;
+	color:#aaa;
+	font-size: 14px;
+}

@@ -1,0 +1,51 @@
+$bgcolor:			#282c38;
+$tipscolor:			#b9b9b9;
+$btncolor:			#282c35;
+@mixin fl($data1,$data2,$data3:#fff){
+	font-size:$data1;
+	line-height:$data2;
+	color:$data3;
+}
+@mixin flex($data1,$data2){
+	display:flex;
+	flex-direction:$data1;
+	justify-content:$data2;
+}
+%margin{
+	margin-left: auto;
+	margin-right:auto;
+}
+%size{
+	width:count(298rem);
+	height:count(40rem);
+}
+%textstyle{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-break: break-all;
+}
+@mixin bg($data1,$data2,$data3,$data4,$data5){
+	$url:"../../assets/imgs/#{$data1}";
+	background:url($url) no-repeat $data2 $data3;
+	background-size:$data4 $data5;
+}
+@mixin position($ver1,$ver2,$data1,$data2,$type1:absolute){
+	position:$type1;
+	#{$ver1}:$data1;
+	#{$ver2}:$data2;
+}
+@mixin placeholder($class){
+	#{$class} input::-webkit-input-placeholder{
+		color:$tipscolor;
+	}
+}
+%button{
+	width:90%;
+	height:1rem;
+	background-color:$btncolor;
+	@include fl(14px,1rem,#fff);
+	display: block;
+	@extend %margin;
+	border-radius:3px;
+}
+
